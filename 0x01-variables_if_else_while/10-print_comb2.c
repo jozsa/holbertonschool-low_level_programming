@@ -13,8 +13,8 @@ int main(void)
 
 	while (num <= 99)
 	{
-		putchar('0' + (num/10));
-		putchar('0' + (num%10));
+		putchar('0' + (num / 10));
+		putchar('0' + (num % 10));
 		putchar(',');
 		putchar(' ');
 		num++;
