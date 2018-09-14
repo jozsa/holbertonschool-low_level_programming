@@ -12,9 +12,11 @@ int main(void)
 {
 	char z = 'a';
 
-	for (z = 'a'; z <= 'z'; ++z)
+	while (z <= 'z')
+	{
 		putchar(z);
-
+		z++;
+	}
 	putchar('\n');
 	return (0);
 }
