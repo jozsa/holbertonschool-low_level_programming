@@ -12,15 +12,16 @@ int main(void)
 {
 	char z = 'a';
 
-	do {
+	while (z <= 'z')
+	{
+		putchar(z);
+		z++;
 		if ((z == 'e') || (z == 'q'))
 		{
 			z++;
 			continue;
 		}
-		putchar(z);
-		z++;
-	} while (z <= 'z');
+	}
 	putchar('\n');
 	return (0);
 }
