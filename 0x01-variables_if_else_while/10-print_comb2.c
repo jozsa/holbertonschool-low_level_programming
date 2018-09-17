@@ -9,15 +9,22 @@
 
 int main(void)
 {
-	int num = 00;
+	int y, z;
 
-	while (num <= 99)
+	while (y <= 9)
 	{
-		putchar('0' + (num / 10));
-		putchar('0' + (num % 10));
+		putchar('0' + y);
+		putchar('0' + z);
+		if (y == 9 && z == 9)
+			break;
 		putchar(',');
 		putchar(' ');
-		num++;
+		z++;
+		if (z > 9)
+		{
+			y++;
+			z = 0;
+		}
 	}
 	putchar('\n');
 	return (0);
