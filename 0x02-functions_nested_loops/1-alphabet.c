@@ -11,10 +11,12 @@
 void print_alphabet(void)
 {
 	char abc[] = "abcdefghijklmnopqrstuvwxyz";
-	int dig = 0;
+	int digit = 0;
 
-	for (dig = 0; dig < 27; dig++)
-		_putchar(abc[dig]);
-
+	while (digit < 26)
+	{
+		_putchar(abc[digit]);
+		digit++;
+	}
 	_putchar ('\n');
 }
