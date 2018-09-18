@@ -13,8 +13,11 @@ int main(void)
 	char hbtn[] = "Holberton";
 	int digit = 0;
 
-	for (digit = 0; digit < 10; digit++)
+	while (digit < 9)
+	{
 		_putchar(hbtn[digit]);
+		digit++;
+	}
 
 	_putchar ('\n');
 	return (0);
