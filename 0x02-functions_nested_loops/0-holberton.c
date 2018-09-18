@@ -18,7 +18,6 @@ int main(void)
 		_putchar(hbtn[digit]);
 		digit++;
 	}
-
 	_putchar ('\n');
 	return (0);
 }
