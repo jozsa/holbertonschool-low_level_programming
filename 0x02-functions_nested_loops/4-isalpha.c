@@ -11,10 +11,10 @@
 
 int _isalpha(int c)
 {
-        int letter = c;
+	int letter = c;
 
-        if ((letter < 123 && letter > 96) || (letter < 90 && letter > 65))
-                return (1);
-        else
-                return (0);
+	if ((letter < 123 && letter > 96) || (letter < 90 && letter > 65))
+		return (1);
+	else
+		return (0);
 }
