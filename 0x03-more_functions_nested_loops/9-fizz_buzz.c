@@ -12,30 +12,31 @@ int main(void)
 {
 	int number = 1;
 
-	while (number < 100)
+	while (number <= 100)
 	{
-	        if (number % 3 == 0 && number % 5 == 0)
+		if (number % 3 == 0 && number % 5 == 0)
 		{
 			number++;
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if (number % 3 == 0)
 		{
 			number++;
-			printf("Fizz ");
+			printf("Fizz");
 		}
 		else if (number % 5 == 0)
 		{
 			number++;
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d ", number);
+			printf("%d", number);
 			number++;
 		}
+		if (number <= 100)
+			printf(" ");
 	}
-	if (number == 100)
-		printf("%d\n", number);
+	printf("\n");
 	return (0);
 }
