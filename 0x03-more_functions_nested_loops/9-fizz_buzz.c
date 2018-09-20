@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include "holberton.h"
 
-/*
+/**
  * main - Prints all numbers
  *
- * Description: Print Fizz, Buzz, and FizzBuzz for multiples of 3, 5, and 3&5
+ * Description: Replaces multiples of 3, 5, 3&5 with Fizz, Buzz, and FizzBuzz
  * Return: Always 0
  */
 
 int main(void)
 {
-	int number = 0;
+	int number = 1;
 
 	while (number < 100)
 	{
-		printf("%d ", number);
-		number++;
-		if (number % 3 == 0 && number % 3 == 0)
+	        if (number % 3 == 0 && number % 5 == 0)
 		{
 			number++;
 			printf("FizzBuzz ");
@@ -30,6 +28,11 @@ int main(void)
 		{
 			number++;
 			printf("Buzz ");
+		}
+		else
+		{
+			printf("%d ", number);
+			number++;
 		}
 	}
 	if (number == 100)
