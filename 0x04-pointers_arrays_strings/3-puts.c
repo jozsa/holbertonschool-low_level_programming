@@ -8,9 +8,11 @@
 
 void _puts(char *str)
 {
-	while(*str)
+	while (*str)
 	{
-		if(_putchar(*str++) == EOF) _putchar(EOF);
+		if (_putchar(*str++) == '0')
+			_putchar('0');
 	}
-	if(_putchar('\n') == EOF) _putchar(EOF);
+	if (_putchar('\n') == '0')
+		_putchar('0');
 }
