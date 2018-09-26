@@ -6,13 +6,15 @@
  * @s: The string to be reversed
  */
 
-void print_rev(char *str)
+void print_rev(char *s)
 {
-	int num = 0;
-
-	while (*(str + num) != '\0')
+	while (*s != '\0')
+		s++;
+	s--;
+	while (*s)
 	{
-			_putchar('\0');
-			num--;
+		_putchar(*s);
+		s--;
 	}
-}
+	_putchar('\n');
+}	
