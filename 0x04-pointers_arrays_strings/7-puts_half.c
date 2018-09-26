@@ -2,13 +2,14 @@
 #include "holberton.h"
 
 /**
- * comment -
+ * puts_half - Prints the second half of a string
+ * @str: The string to be printed
  */
 
 void puts_half(char *str)
 {
-        int length = 0;
-	int number =0;
+	int length = 0;
+	int number = 0;
 
 	while (str[number++])
 	{
@@ -28,8 +29,8 @@ void puts_half(char *str)
 	number = length;
 
 	while (str[length++])
-		{
-			_putchar(str[number++]);
-		}
+	{
+		_putchar(str[number++]);
+	}
 	_putchar('\n');
 }
