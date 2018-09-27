@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -7,17 +8,19 @@
 
 void puts2(char *str)
 {
-	int number = 0;
 	int length = 0;
+	int num = 0;
 
-	while (str[number++])
-		length++;
-
-	number = 0;
-	_putchar(str[number]);
-	while (str[number += 2] && number <= length)
+	while (str[num++])
 	{
-		_putchar(str[number]);
+		length++;
 	}
-	_putchar('\n');
+
+	num = 0;
+
+	while (*str && num <= length)
+	{
+		_putchar(str[num]);
+		num += 2;
+	}
 }
