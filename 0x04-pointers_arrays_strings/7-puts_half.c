@@ -24,6 +24,7 @@ void puts_half(char *str)
 	else
 	{
 		length = (length - 1) / 2;
+		length = (length + 1);
 	}
 
 	number = length;
