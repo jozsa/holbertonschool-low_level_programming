@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strchr: Locate a character in a string
+ * _strchr - Locate a character in a string
  * @s: The string to be evaluated
  * @c: The character to be located
  *
@@ -10,12 +10,12 @@
 
 char *_strchr(char *s, char c)
 {
-	while(*s++)
+	while (*s++)
 	{
 		if (*s == c)
 			return (s);
 		if (*s == '\0')
 			return (s);
 	}
-	return(0);
+	return (0);
 }
