@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
- * print_diagsums - Print the sum of two diagonals of a square matrix of integers
+ * print_diagsums - Adding the diagonals of a square matrix
  * @a: The square matrix
  * @size: The size of the square matrix
  */
