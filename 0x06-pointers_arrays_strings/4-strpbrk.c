@@ -18,12 +18,9 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[scount] == accept[account])
 			{
-				s++;
-				return (s + 1);
+				return (s + scount);
 			}
 		}
 	}
-	if (*s != *accept)
-		return (0);
-	return (s);
+	return (0);
 }
