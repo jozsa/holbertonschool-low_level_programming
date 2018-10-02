@@ -1,5 +1,13 @@
 #include "holberton.h"
 
+/**
+ * _strpbrk - Searches a string for any set of bytes
+ * @s: The string to be searched
+ * @accept: The string to compare
+ *
+ * Return: A pointer to the byte in s that matches accept
+ */
+
 char *_strpbrk(char *s, char *accept)
 {
 	int scount, account;
@@ -11,6 +19,8 @@ char *_strpbrk(char *s, char *accept)
 			s++;
 			return (s + 1);
 		}
-	}	
+	}
+	if (*s != *accept)
+		return (0);
 	return (s);
 }
