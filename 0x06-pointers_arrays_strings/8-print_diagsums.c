@@ -9,13 +9,12 @@
 
 void print_diagsums(int *a, int size)
 {
-	int row, column = 0, sum1, sum2;
+	int row, column, sum1 = 0, sum2 = 0;
 
-	for (row = 0; row < size; row++)
+	for (row = 0, column = 0; row < size; row++, column++)
 	{
-			sum1 += *(a + row * size + column);
-			sum2 += *(a + row * size + (size - 1 - column));
-			column++;
+		sum1 += *(a + row * size + column);
+		sum2 += *(a + row * size + (size - 1 - column));
 	}
 	printf("%d, %d\n", sum1, sum2);
 }
