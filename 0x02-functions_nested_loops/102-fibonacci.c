@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	unsigned long int num1 = 0, num2 = 1, next;
+	unsigned long int num1 = 1, num2 = 2, next;
 	int count;
 
-	for (count = 0; count <= 50; count++)
+	for (count = 1; count <= 50; count++)
 	{
-		if (count <= 1)
+		if (count <= 2)
 			next = count;
 		else
 		{
