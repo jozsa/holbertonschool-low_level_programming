@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	{
 		a = atoi(argv[1]);
 		b = atoi(argv[2]);
-		product = (a * b); 
+		product = (a * b);
 		printf("%d\n", product);
 	}
 	else if (argc != 3)
