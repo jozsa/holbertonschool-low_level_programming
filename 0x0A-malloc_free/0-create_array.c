@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * create_array - Create an array of chars & initialize it with specific char
@@ -15,7 +16,7 @@ char *create_array(unsigned int size, char c)
 	unsigned int index;
 	*ar = c;
 
-	if (size == 0 || size == '\0')
+	if (size == 0 || ar == NULL)
 		return (NULL);
 
 	for (index = 0; index < size; index++)
