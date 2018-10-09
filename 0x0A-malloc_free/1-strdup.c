@@ -26,5 +26,8 @@ char *_strdup(char *str)
 
 	*storage = '\0';
 
+	if (str == NULL || str2 == NULL)
+		return (NULL);
+
 	return (str2);
 }
