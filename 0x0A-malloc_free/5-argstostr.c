@@ -27,10 +27,10 @@ char *argstostr(int ac, char **av)
 		{
 		}
 		length += letter + 1;
-	}	
+	}
 	arr = malloc(sizeof(char) * length + 1);
 	if (arr == NULL)
-		return(NULL);
+		return (NULL);
 	for (str = 0; str < ac; str++)
 	{
 		for (letter = 0; av[str][letter] != '\0'; letter++)
@@ -42,5 +42,5 @@ char *argstostr(int ac, char **av)
 		index++;
 	}
 	arr[index] = '\0';
-	return(arr);
+	return (arr);
 }
