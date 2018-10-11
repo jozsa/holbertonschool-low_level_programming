@@ -44,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		dest[index] = *s1;
 		index++;
 	}
-	for (len = 0; len <= n; len++)
+	for (len = 0; len < n; len++)
 	{
 		dest[index] = s2[len];
 		index++;
