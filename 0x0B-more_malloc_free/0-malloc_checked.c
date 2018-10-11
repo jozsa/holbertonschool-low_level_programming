@@ -4,7 +4,9 @@
 
 /**
  * malloc_checked - Allocates memory to whatever is passed to the function
- * @b: The values that need memory to be allocated
+ * @b: The values passed to the function
+ *
+ * Return: A pointer to the allocated memory
  */
 
 void *malloc_checked(unsigned int b)
@@ -13,10 +15,10 @@ void *malloc_checked(unsigned int b)
 
 	type = malloc(b);
 
-	if(type == NULL)
+	if (type == NULL)
 	{
 		free(type);
 		exit(98);
 	}
-	return(type);
+	return (type);
 }
