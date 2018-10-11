@@ -16,9 +16,6 @@ void *malloc_checked(unsigned int b)
 	type = malloc(b);
 
 	if (type == NULL)
-	{
-		free(type);
 		exit(98);
-	}
 	return (type);
 }
