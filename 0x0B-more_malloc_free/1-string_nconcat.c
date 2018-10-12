@@ -22,9 +22,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (s1len = 0; s1[s1len] != '\0'; s1len++)
+	for (s1len = 1; s1[s1len] != '\0'; s1len++)
 		;
-	for (s2len = 0; s2[s2len] != '\0'; s2len++)
+	for (s2len = 1; s2[s2len] != '\0'; s2len++)
 		;
 	if (s2len >= n)
 		n = s2len;
