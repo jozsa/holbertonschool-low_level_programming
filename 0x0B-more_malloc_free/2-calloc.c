@@ -22,7 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (arr == NULL)
 		return (NULL);
 	ptr = arr;
-	while (index <= (nmemb * size))
+	while (index < (nmemb * size))
 	{
 		ptr[index] = '\0';
 		index++;
