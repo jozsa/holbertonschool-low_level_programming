@@ -2,6 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * array_range - Creates an array of consecutive integers from min to max
+ * @min: The first number to initialize the array with
+ * @max: The last number in the array
+ *
+ * Return: A pointer to the array
+ */
+
 int *array_range(int min, int max)
 {
 	int *arr;
