@@ -31,10 +31,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	dest = malloc(sizeof(char) * ((s1len + n) + 1));
 	if (dest == NULL)
 		return (NULL);
-	for (; *s1 != '\0'; s1++)
+	for (; s1[index] != '\0'; index++)
 	{
-		dest[index] = *s1;
-		index++;
+		dest[index] = s1[index];
 	}
 	for (len = 0; len < n; len++)
 	{
