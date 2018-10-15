@@ -1,0 +1,1 @@
+Learn about structs and typedefs
