@@ -15,13 +15,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doggo;
 	int nindex, oindex;
+	int nlen, olen;
 
 	doggo = malloc(sizeof(struct dog));
 	if (doggo == NULL)
 		return (NULL);
-	doggo->name = malloc(sizeof(name + 1));
+	for (nlen = 1; name[nlen] != '\0'; nlen++)
+		;
+	doggo->name = malloc(sizeof(char) * nlen);
 	if (doggo->name == NULL)
 		return (NULL);
+	for (olen = 1; owner[olen] != '\0'; olen++)
+		;
 	doggo->owner = malloc(sizeof(owner + 1));
 	if (doggo->owner == NULL)
 	{
