@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
+/**
+ * print_dog - Prints the elements of the struct dog
+ * @d: The pointer to struct dog elements
+ */
 
 void print_dog(struct dog *d)
 {
@@ -12,7 +15,7 @@ void print_dog(struct dog *d)
 		printf("Name: (nil)\n");
 	else
 		printf("Name: %s\n", d->name);
-	if (d->age == '\0')
+	if (!d->age)
 		printf("Age: (nil)\n");
 	else
 		printf("Age: %f\n", d->age);
