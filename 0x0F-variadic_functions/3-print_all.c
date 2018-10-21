@@ -58,9 +58,8 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int index = 0, index2 = 0;
-	int count = 0;
 	char *sep = "";
-	test printer[5] = {
+	test printer[] = {
 		{"c", print_c},
 		{"i", print_i},
 		{"f", print_f},
@@ -84,7 +83,6 @@ void print_all(const char * const format, ...)
 			index++;
 		}
 		index2++;
-		count++;
 	}
 	va_end(ap);
 	printf("\n");
