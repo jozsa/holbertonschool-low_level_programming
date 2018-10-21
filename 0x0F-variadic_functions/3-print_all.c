@@ -40,7 +40,13 @@ void print_f(va_list ap)
 
 void print_s(va_list ap)
 {
-	printf("%s", va_arg(ap, char*));
+	char *str;
+	
+	str = va_arg(ap, char*);
+
+	if (str == NULL)
+		str = "(nil)";
+	printf("%s", str);
 }
 
 /**
