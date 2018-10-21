@@ -41,7 +41,7 @@ void print_f(va_list ap)
 void print_s(va_list ap)
 {
 	char *str;
-	
+
 	str = va_arg(ap, char*);
 
 	if (str == NULL)
