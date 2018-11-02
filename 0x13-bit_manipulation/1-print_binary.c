@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 		_putchar(n + '0');
 	else
 	{
-		for (shift = 31; shift >= 0; shift--)
+		for (shift = 63; shift >= 0; shift--)
 		{
 			bin = n >> shift;
 			if (bin != 0)
