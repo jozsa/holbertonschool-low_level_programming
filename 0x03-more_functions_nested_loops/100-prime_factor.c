@@ -3,7 +3,7 @@
 /**
  * main - Prints largest prime factor of 612852475143
  *
- * Return: Always 1
+ * Return: Always 0
  */
 
 int main(void)
@@ -14,12 +14,14 @@ int main(void)
 	for (divisor = 2; divisor < x; divisor++)
 	{
 		if (x % divisor == 0)
-			quotient = x / divisor;
-		for (modulo = 2; modulo < 10; modulo++)
 		{
-			primetester = quotient % modulo;
-			if (primetester == 0)
-				break;
+			quotient = x / divisor;
+			for (modulo = 2; modulo < 10; modulo++)
+			{
+				primetester = quotient % modulo;
+				if (primetester == 0)
+					break;
+			}
 		}
 		if (modulo == 10)
 		{
@@ -27,5 +29,5 @@ int main(void)
 			break;
 		}
 	}
-	return (1);
+	return (0);
 }
