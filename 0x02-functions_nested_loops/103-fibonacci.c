@@ -14,9 +14,11 @@ void main(void)
 	{
 		temp = num1 + num2;
 		if (temp % 2 == 0)
+		{
 			sum = sum + temp;
+			printf("%lu\n", sum);
+		}
 		num1 = num2;
 		num2 = temp;
 	}
-	printf("%lu\n", sum);
 }
