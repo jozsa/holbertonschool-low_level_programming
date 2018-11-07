@@ -35,12 +35,6 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	wt = write(fd2, buffer, length);
-	if (wt == -1 || fd2 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		free(buffer);
-		exit(99);
-	}
 	while (length > 0)
 	{
 		if (wt == -1 || fd2 == -1)
