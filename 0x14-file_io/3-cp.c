@@ -27,12 +27,6 @@ int main(int argc, char **argv)
 		return (0);
 	fd = open(argv[1], O_RDONLY);
 	fd2 = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
-	if (fd2 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		free(buffer);
-		exit(99);
-	}
 	length = read(fd, buffer, 1024);
 	if (length == -1 || fd == -1)
 	{
