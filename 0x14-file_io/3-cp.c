@@ -35,15 +35,15 @@ int main(int argc, char **argv)
 	wt = write(fd2, buffer, length);
 	while (length != 0)
 	{
+		if (wt == -1 || fd2 == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			exit(99);
+		}
 		length = read(fd, buffer, 1024);
 		wt = write(fd2, buffer, length);
 		buffer = buffer + length;
 	}
-	if (fd2 == -1 || wt == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
-                exit(99);
-        }
 	ct = close(fd);
 	ct2 = close(fd2);
 	if (ct == -1 || ct2 == -1)
