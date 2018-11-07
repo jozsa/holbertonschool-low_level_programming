@@ -19,35 +19,36 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	buffer = malloc(1024);
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		printf("Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	length = read(fd, buffer, 1024);
+	length += read(fd, buffer, 1024);
 	ct = close(fd);
 	if (ct == -1)
 	{
-		printf("Error: can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd);
 		exit(100);
 	}
 	fd = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
 	wt = write(fd, buffer, length);
 	if (fd == -1 || wt == -1)
 	{
-		printf("Error: Can't write to file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
 	ct = close(fd);
 	if (ct == -1)
 	{
-		printf("Error: can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd);
 		exit(100);
 	}
+	free(buffer);
 	return (0);
 }
