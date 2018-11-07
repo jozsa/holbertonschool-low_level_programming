@@ -29,12 +29,18 @@ int main(int argc, char **argv)
 	fd2 = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
 	length = read(fd, buffer, 1024);
 	if (length == -1 || fd == -1)
-        {
-                dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-                free(buffer);
-                exit(98);
-        }
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		free(buffer);
+		exit(98);
+	}
 	wt = write(fd2, buffer, length);
+	if (wt == -1 || fd2 == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		free(buffer);
+		exit(99);
+	}
 	while (length > 0)
 	{
 		if (wt == -1 || fd2 == -1)
