@@ -15,7 +15,7 @@
 
 int main(int argc, char **argv)
 {
-	int length = 0, fd = 0, fd2, wt = 0, ct = 0, ct2 = 0;
+	int length = 0, fd = 0, fd2, wt = 0;
 	char *buffer;
 
 	if (argc != 3)
@@ -29,6 +29,7 @@ int main(int argc, char **argv)
 	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		free(buffer);
 		exit(98);
 	}
 	length = read(fd, buffer, 1024);
@@ -37,19 +38,20 @@ int main(int argc, char **argv)
 	{
 		if (wt == -1 || fd2 == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			free(buffer);
 			exit(99);
 		}
 		length = read(fd, buffer, 1024);
 		wt = write(fd2, buffer, length);
 		buffer = buffer + length;
 	}
-	ct = close(fd);
-	ct2 = close(fd2);
-	if (ct == -1 || ct2 == -1)
+	if (close(fd) == -1 || close(fd2) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		free(buffer);
 		exit(100);
 	}
+	free(buffer);
 	return (0);
 }
