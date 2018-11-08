@@ -67,7 +67,7 @@ int main(int argc, char **argv)
 	fd = open(argv[1], O_RDWR);
 	if (fd == -1)
 		error_98(argv[1]);
-	fd2 = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
+	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 		error_99(argv[2]);
 	length = read(fd, buffer, 1024);
