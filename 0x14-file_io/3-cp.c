@@ -64,7 +64,7 @@ int main(int argc, char **argv)
 	buffer = malloc(1024);
 	if (buffer == NULL)
 		return (0);
-	fd = open(argv[1], O_RDWR);
+	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 		error_98(argv[1]);
 	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
