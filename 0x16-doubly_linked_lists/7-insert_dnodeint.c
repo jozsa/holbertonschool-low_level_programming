@@ -19,9 +19,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (new == NULL || *h == NULL)
 		return (NULL);
 	new->n = n;
-	count = dlistint_len(*h);
-	if (idx > count)
-		return (NULL);
 	for (count = 0; count < (idx - 1); count++)
 		temp = temp->next;
 	new->next = temp->next;
