@@ -1,26 +1,6 @@
 #include "lists.h"
 
 /**
- * dlistint_len - Return the number of elements in a doubly linked list
- * @h: The first node of the doubly linked list
- *
- * Return: Number of elements
- */
-
-size_t dlistint_len(const dlistint_t *h)
-{
-	const dlistint_t *temp = h;
-	size_t count = 0;
-
-	while (temp != NULL)
-	{
-		count++;
-		temp = temp->next;
-	}
-	return (count);
-}
-
-/**
   * insert_dnodeint_at_index - Insert a node at idx
   * @h: A pointer to the beginning of the doubly linked list
   * @idx: The index to insert the new node at
@@ -31,23 +11,38 @@ size_t dlistint_len(const dlistint_t *h)
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int count = 0;
+	unsigned int count = 1;
 	dlistint_t *new;
-	dlistint_t *temp = *h;
+	dlistint_t *current = *h;
+	dlistint_t *end = *h;
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL || *h == NULL)
 		return (NULL);
+	while (end != NULL)
+		end = end->next;
 	new->n = n;
-	count = dlistint_len(*h);
-	if (idx > count)
-		return (NULL);
-	for (count = 0; count < (idx - 1); count++)
-		temp = temp->next;
-	new->next = temp->next;
-	temp->next = new;
-	new->prev = temp->prev;
-	if (new->next != NULL)
-		new->next->prev = new;
-	return (new);
+	for (count = 1; count < (idx - 1) && current != NULL; count++)
+		current = current->next;
+	printf("count is: %d, idx is: %d\n", count, idx);
+	if (count == 1)
+	{
+		add_dnodeint(h, n);
+		return (new);
+	}
+	else if (current == end)
+	{
+		add_dnodeint_end(h, n);
+		return (new);
+	}
+	else if (current != NULL)
+	{
+		new->next = current->next;
+		new->prev = current;
+		if (current->next != NULL)
+			current->next->prev = new;
+		current->next = new;
+		return (new);
+	}
+	return (NULL);
 }
