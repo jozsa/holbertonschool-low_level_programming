@@ -20,7 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(key_dup);
 		return (0);
 	}
-	new = malloc(sizeof(hash_node_t));
+	new = malloc(sizeof(hash_node_t *));
 	if (new == NULL)
 		return (0);
 	index = key_index((unsigned char *)key_dup, ht->size);
