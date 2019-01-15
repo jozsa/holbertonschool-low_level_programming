@@ -15,8 +15,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new;
 	char *key_dup = strdup(key);
 
-	if (strcmp(key, "") == 0)
+	if (strcmp(key, "") == 0 || key == NULL || value == NULL)
+	{
+		free(key_dup);
 		return (0);
+	}
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 		return (0);
