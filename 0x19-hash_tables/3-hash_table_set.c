@@ -13,16 +13,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	size_t index;
 	hash_node_t *new;
-	char *key_dup = strdup(key);
+	char *key_dup;
 
-	if (strcmp(key, "") == 0 || key == NULL || value == NULL)
-	{
-		free(key_dup);
+	if (ht == NULL || ht->array == NULL || ht->size == 0)
 		return (0);
-	}
-	new = malloc(sizeof(hash_node_t *));
+	if (strcmp(key, "") == 0 || key == NULL || value == NULL)
+		return (0);
+	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 		return (0);
+	key_dup = strdup(key);
 	index = key_index((unsigned char *)key_dup, ht->size);
 	new->key = key_dup;
 	new->value = strdup(value);
