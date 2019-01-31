@@ -13,7 +13,7 @@ C File | Task
 5-print_numbers.c | Prints all single digit numbers of base 10 starting from 0
 6-print_numberz.c | Prints all single digit numbers of base 10 starting from 0 (no char variable, and use putchar only)
 7-print_tebahpla.c | Prints lowercase alphabet in reverse (putchar only)
-8-Print all numbers of base 16 in lowercase (putchar only)
+8-print_base16.c | Print all numbers of base 16 in lowercase (putchar only)
 9-print_comb.c | Print all possible combinations of single-digit numbers (putchar only)
 10-print_comb2.c | Print numbers from 00 to 99 (putchar only)
 100-print_comb3.c | Print all possible different combinations of two digits (putchar only)
