@@ -1,0 +1,42 @@
+#include "sort.h"
+
+/**
+ * counting_sort - Sorts an array using the counting sort method
+ * @array: The array to sort
+ * @size: The size of the array
+ */
+void counting_sort(int *array, size_t size)
+{
+	int *dup_array;
+	int *count_array;
+	unsigned int array_index;
+	unsigned int index;
+	unsigned int i;
+	int idx;
+	int max = 0;
+
+	max = array[0];
+	for (i = 1; i < size - 1; i++)
+	{
+		if (array[i] > max)
+			max = array[i];
+	}
+	count_array = malloc(sizeof(int) * max);
+	dup_array = malloc(sizeof(int) * size);
+	for (i = 0; i < size; i++)
+	{
+		count_array[array[i]] += 1;
+		dup_array[i] = array[i];
+	}
+	for (idx = 1; idx <= max; idx++)
+		count_array[idx] += count_array[idx - 1];
+	print_array(count_array, max + 1);
+	for (i = 0; i < size; i++)
+	{
+		array_index = dup_array[i];
+		index = count_array[array_index];
+		array[index - 1] = dup_array[i];
+		count_array[array_index] -= 1;
+	}
+	free(count_array);
+}
