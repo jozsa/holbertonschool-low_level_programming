@@ -9,10 +9,10 @@ void counting_sort(int *array, size_t size)
 {
 	int *dup_array;
 	int *count_array;
-	unsigned int array_index;
-	unsigned int index;
-	unsigned int i;
-	int idx;
+	unsigned int array_index = 0;
+	unsigned int index = 0;
+	unsigned int i = 0;
+	int idx = 0;
 	int max = 0;
 
 	max = array[0];
@@ -21,7 +21,7 @@ void counting_sort(int *array, size_t size)
 		if (array[i] > max)
 			max = array[i];
 	}
-	count_array = malloc(sizeof(int) * max);
+	count_array = malloc(sizeof(int) * max + 1);
 	dup_array = malloc(sizeof(int) * size);
 	for (i = 0; i < size; i++)
 	{
