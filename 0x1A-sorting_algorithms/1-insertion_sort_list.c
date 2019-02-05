@@ -7,9 +7,9 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *i, *j = *list;
+	listint_t *i, *j = list ? *list : NULL;
 
-	while ((i = j = j->next))
+	while (j && (i = j = j->next))
 	{
 		while (j->prev && j->prev->n > i->n)
 		{
