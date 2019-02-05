@@ -39,4 +39,5 @@ void counting_sort(int *array, size_t size)
 		count_array[array_index] -= 1;
 	}
 	free(count_array);
+	free(dup_array);
 }
