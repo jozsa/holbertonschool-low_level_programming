@@ -9,7 +9,7 @@
 
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *temp = *list;
+	listint_t *temp = list ? *list : NULL;
 	int swapped = 0; /* if 2 elements have been swapped, this is set to 1 */
 	int phase = 0; /* 0 for forward, 1 for backward */
 
@@ -34,17 +34,11 @@ void cocktail_sort_list(listint_t **list)
 			temp = temp->next;
 		else if (phase == 1 && temp->prev && !(temp->prev->n > temp->n))
 			temp = temp->prev;
-		if (swapped == 0 && (temp->next == NULL || temp->prev == NULL))
+		else if (swapped == 0 && (temp->next == NULL || temp->prev == NULL))
 			return;
 		else if (swapped == 1 && temp->next == NULL)
-		{
-			swapped = 0;
-			phase = 1;
-		}
+			swapped = 0, phase = 1;
 		else if (swapped == 1 && temp->prev == NULL)
-		{
-			swapped = 0;
-			phase = 0;
-		}
+			swapped = 0, phase = 0;
 	}
 }
