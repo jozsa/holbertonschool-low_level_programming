@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * shell_sort - Sintervalell sort an array using Knutinterval sequence
+ * shell_sort - Shell sort an array using Knuth sequence
  * @array: Array to sort
  * @size: Size of array to sort
  */
