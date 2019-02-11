@@ -5,7 +5,6 @@
  * @array: The array to sort
  * @size: The size of the array to sort
  */
-
 void bubble_sort(int *array, size_t size)
 {
 	unsigned int i = 0;		/* index of array */
@@ -26,17 +25,15 @@ void bubble_sort(int *array, size_t size)
 			print_array(array, size);
 		}
 		i++;
-		/*
-		 * if a swap has not occured and the array is
-		 * at the end, the array has been sorted.
-		 */
+
+		/* if a swap has not occured and the array is */
+		/* at the end, the array has been sorted.     */
 		if (i == size - 1 && !swapped)
 			return;
-		/*
-		 * if a swap has occured and the array is
-		 * at the end, go through the array again
-		 * and swap if necessary.
-		 */
+
+		/* if a swap has occured and the array is */
+		/* at the end, go through the array again */
+		/* and swap if necessary.		  */
 		else if (i == size - 1 && swapped)
 		{
 			i = 0;
