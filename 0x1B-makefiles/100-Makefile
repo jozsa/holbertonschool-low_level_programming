@@ -10,7 +10,7 @@ all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
 clean: 
-	$(RM) ~* $(NAME) 
+	$(RM) *~ $(NAME) 
 
 oclean: 
 	$(RM) $(OBJ) 
