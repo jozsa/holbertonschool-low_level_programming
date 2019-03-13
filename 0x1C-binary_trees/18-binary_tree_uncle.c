@@ -9,16 +9,17 @@
 
 binary_tree_t *find_sibling(binary_tree_t *node)
 {
-	binary_tree_t *sibling;
+	binary_tree_t *sibling = NULL;
 
 	if (!node || !node->parent)
 		return (NULL);
-	if (node->parent->left->n == node->n)
-		sibling = node->parent->right;
-	else if (node->parent->right->n == node->n)
-		sibling = node->parent->left;
-	if (!sibling)
-		return (NULL);
+	if (node->parent->left && node->parent->right)
+	{
+		if (node->parent->left->n == node->n)
+			sibling = node->parent->right;
+		else if (node->parent->right->n == node->n)
+			sibling = node->parent->left;
+	}
 	return (sibling);
 }
 
@@ -30,12 +31,10 @@ binary_tree_t *find_sibling(binary_tree_t *node)
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	binary_tree_t *aunt; 
-	
-	if (!node)
+	binary_tree_t *aunt = NULL;
+
+	if (!node || !node->parent) 
 		return (NULL);
 	aunt = find_sibling(node->parent);
-	if (!aunt)
-		return (NULL);
 	return (aunt);
 }
