@@ -30,8 +30,8 @@ binary_tree_t *find_sibling(binary_tree_t *node)
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	binary_tree_t *aunt; 
-	
+	binary_tree_t *aunt;
+
 	if (!node)
 		return (NULL);
 	aunt = find_sibling(node->parent);
