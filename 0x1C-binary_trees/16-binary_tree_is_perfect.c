@@ -1,9 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * find_height 
+ * find_height - Measures the height of a binary tree
+ * @tree: The tree to measure
  *
- * Return
+ * Return: Height of the binary tree
  */
 
 int find_height(const binary_tree_t *tree)
@@ -12,9 +13,9 @@ int find_height(const binary_tree_t *tree)
 	int r = 0;
 
 	if (!tree)
-		return 0;
+		return (0);
 	if (!tree->left && !tree->right)
-		return 0;
+		return (0);
 	l = find_height(tree->left);
 	r = find_height(tree->right);
 	if (l > r)
@@ -23,15 +24,16 @@ int find_height(const binary_tree_t *tree)
 		return (r + 1);
 }
 /**
- * count_leaves -
+ * count_leaves - Counts the number of leaves in a binary tree
+ * @tree: The tree to count leaves of
  *
- * Return:
+ * Return: Number of leaves in a binary tree
  */
 
 int count_leaves(const binary_tree_t *tree)
 {
 	int leaves = 0;
-	
+
 	if (!tree)
 		return (0);
 	if (!tree->left && !tree->right)
@@ -42,9 +44,10 @@ int count_leaves(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_is_perfect -
+ * binary_tree_is_perfect - Checks whether or not a binary tree is perfect
+ * @tree: The tree to check
  *
- * Return:
+ * Return: 1 if it is perfect, 0 if it is not.
  */
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
