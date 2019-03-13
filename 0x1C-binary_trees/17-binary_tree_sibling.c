@@ -8,14 +8,17 @@
  */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 {
-	binary_tree_t *sibling;
+	binary_tree_t *sibling = NULL;
 
 	if (!node || !node->parent)
 		return (NULL);
-	if (node->parent->left->n == node->n)
-		sibling = node->parent->right;
-	else if (node->parent->right->n == node->n)
-		sibling = node->parent->left;
+	if (node->parent->right && node->parent->left)
+	{
+		if (node->parent->left->n == node->n)
+			sibling = node->parent->right;
+		else if (node->parent->right->n == node->n)
+			sibling = node->parent->left;
+	}
 	if (!sibling)
 		return (NULL);
 	return (sibling);
