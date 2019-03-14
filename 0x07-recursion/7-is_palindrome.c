@@ -27,11 +27,11 @@ int _strlen_recursion(char *s)
 
 int palindrome_helper(char *s, int start, int end)
 {
-	end -= 1;
 	if (s[start] != s[end])
 		return (0);
-	palindrome_helper(s, start++, end--);
-	return (1);
+	if (start >= end)
+		return (1);
+	return (palindrome_helper(s, start + 1, end - 1));
 }
 
 /**
@@ -45,7 +45,7 @@ int is_palindrome(char *s)
 {
 	int end = _strlen_recursion(s);
 
-	if (!palindrome_helper(s, 0, end))
+	if (!palindrome_helper(s, 0, end - 1))
 		return (0);
 	return (1);
 }
