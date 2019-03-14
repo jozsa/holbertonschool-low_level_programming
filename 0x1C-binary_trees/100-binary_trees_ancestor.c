@@ -14,21 +14,21 @@ binary_tree_t *second)
 	binary_tree_t *s;
 
 	if (!first || !second)
-		return NULL;
+		return (NULL);
 	else if (first == second)
 	{
-		f = (binary_tree_t*)first;
+		f = (binary_tree_t *)first;
 		return (f);
 	}
 	else if (first->parent == second)
 	{
-		s = (binary_tree_t*)second;
+		s = (binary_tree_t *)second;
 		return (s);
 	}
 	else if (first == second->parent)
 	{
-		f = (binary_tree_t*)first;
+		f = (binary_tree_t *)first;
 		return (f);
 	}
-	return binary_trees_ancestor(first->parent, second->parent);
+	return (binary_trees_ancestor(first->parent, second->parent));
 }
