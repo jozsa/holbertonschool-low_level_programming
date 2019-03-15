@@ -30,5 +30,9 @@ binary_tree_t *second)
 		f = (binary_tree_t *)first;
 		return (f);
 	}
-	return (binary_trees_ancestor(first->parent, second->parent));
+	else if (first->parent && second->parent)
+		return (binary_trees_ancestor(first->parent, second->parent));
+	else if (!first->parent)
+		return (binary_trees_ancestor(first, second->parent));
+	return (binary_trees_ancestor(first->parent, second));
 }
