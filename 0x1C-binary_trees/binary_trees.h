@@ -22,6 +22,12 @@ struct binary_tree_s
 
 typedef struct binary_tree_s binary_tree_t;
 
+typedef struct queue
+{
+	binary_tree_t *node;
+	struct queue *next;
+} queue_t;
+
 /* creation & insertion */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
@@ -38,6 +44,7 @@ int binary_tree_is_root(const binary_tree_t *node);
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 /* measurement */
 size_t binary_tree_height(const binary_tree_t *tree);
