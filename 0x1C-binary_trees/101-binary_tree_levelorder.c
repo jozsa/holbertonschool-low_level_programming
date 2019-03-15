@@ -20,10 +20,35 @@ queue_t *enqueue(queue_t **head, binary_tree_t *node)
 	return (new);
 }
 
+binary_tree_t *dequeue(queue_t **head)
+{
+	queue_t *temp = *head;
+	binary_tree_t *storage = (*head)->node;
+
+	if (!head || !*head)
+		return (NULL);
+	free(temp);
+	*head = (*head)->next;
+	return (storage);
+}
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	queue_t *head = NULL;
+	binary_tree_t *temp = NULL;
 	(void)func;
 
 	enqueue(&head, (binary_tree_t *)tree);
+	printf("tree->n is: %d\n", head->node->n);
+	temp = dequeue(&head);
+	func(temp->n);
+	if (head)
+		printf("node->n is: %d\n", head->node->n);
+	enqueue(&head, (binary_tree_t *)tree->left);
+	printf("tree->left->n is: %d\n", head->node->n);
+	temp = dequeue(&head);
+	func(temp->n);
+	enqueue(&head, (binary_tree_t *)tree->right);
+	printf("tree->right->n is: %d\n", head->node->n);
+	temp = dequeue(&head);
+	func(temp->n);
 }
