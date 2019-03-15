@@ -64,4 +64,6 @@ void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second);
 
+int binary_tree_is_complete(const binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */
