@@ -1,5 +1,4 @@
 #include "binary_trees.h"
-#include <limits.h>
 
 /**
  * binary_tree_is_bst - Checks if a binary tree is BST
