@@ -22,6 +22,12 @@ struct binary_tree_s
 
 typedef struct binary_tree_s binary_tree_t;
 
+/**
+ * struct queue - Queue for level order traversal
+ *
+ * @node: Binary tree node stored in queue
+ * @next: Pointer to next node in queue
+ */
 typedef struct queue
 {
 	binary_tree_t *node;
