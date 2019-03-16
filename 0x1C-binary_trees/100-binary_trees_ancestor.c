@@ -16,6 +16,8 @@ binary_tree_t *second)
 		return ((binary_tree_t *)first);
 	else if (first->parent == second)
 		return ((binary_tree_t *)second);
+	else if (!first->parent && !second->parent)
+		return (NULL);
 	else if (first == second->parent)
 		return ((binary_tree_t *)first);
 	else if (first->parent && second->parent)
