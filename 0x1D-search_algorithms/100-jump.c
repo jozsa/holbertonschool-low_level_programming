@@ -26,7 +26,7 @@ int j_s_helper(int *array, size_t low, size_t high, int value, size_t size)
 				if (i < size)
 					printf("Value checked array[%d] = [%d]\n", (int)i, array[i]);
 				if (array[i] == value)
-					return (value);
+					return (i);
 			}
 		}
 		else
