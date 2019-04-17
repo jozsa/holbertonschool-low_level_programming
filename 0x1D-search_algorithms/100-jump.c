@@ -46,7 +46,7 @@ int j_s_helper(int *array, size_t low, size_t high, int value, size_t size)
  */
 int jump_search(int *array, size_t size, int value)
 {
-	if (!array)
+	if (!array || size <= 0)
 		return (-1);
 	return (j_s_helper(array, 0, sqrt(size - 1), value, size));
 }
