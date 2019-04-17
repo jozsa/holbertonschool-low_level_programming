@@ -18,7 +18,7 @@ int j_s_helper(int *array, size_t low, size_t high, int value, size_t size)
 	for (index = low; index < high; index += high)
 	{
 		printf("Value checked array[%d] = [%d]\n", (int)index, array[low]);
-		if ((value >= array[low] && value <= array[high]) || high > size)
+		if (value <= array[high] || !array[high])
 		{
 			printf("Value found between indexes [%d] and [%d]\n", (int)low, (int)high);
 			for (i = low; i <= high; i++)
