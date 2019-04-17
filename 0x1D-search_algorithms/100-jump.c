@@ -15,6 +15,11 @@ int j_s_helper(int *array, size_t low, size_t high, int value, size_t size)
 	size_t index;
 	size_t i;
 
+	if (size == 0)
+	{
+		printf("Value found between indexes [0] and [0]\n");
+		return (-1);
+	}
 	for (index = low; index < high; index += high)
 	{
 		printf("Value checked array[%d] = [%d]\n", (int)index, array[low]);
@@ -46,7 +51,7 @@ int j_s_helper(int *array, size_t low, size_t high, int value, size_t size)
  */
 int jump_search(int *array, size_t size, int value)
 {
-	if (!array || size <= 0)
+	if (!array)
 		return (-1);
 	return (j_s_helper(array, 0, sqrt(size - 1), value, size));
 }
