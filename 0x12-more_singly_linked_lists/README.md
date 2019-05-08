@@ -51,22 +51,6 @@ What you should learn from this project:
 ### [10. Delete at index](./10-delete_nodeint.c)
 * Write a function that deletes the node at index index of a listint_t linked list.
 
-
-### [11. Reverse list](./100-reverse_listint.c)
-* Write a function that reverses a listint_t linked list.
-
-
-### [12. Print (safe version)](./101-print_listint_safe.c)
-* Write a function that prints a listint_t linked list.
-
-
-### [13. Free (safe version)](./102-free_listint_safe.c)
-* Write a function that frees a listint_t list.
-
-
-### [14. Find the loop](./103-find_loop.c)
-* Write a function that finds the loop in a linked list.
-
 ---
 
 ## Author
