@@ -1,43 +1,21 @@
-# 0x13. C - Bit manipulation
+# 0x17. C - Dynamic libraries
 
 ## Description
 What you should learn from this project:
 
-* Look for the right source of information without too much help
-* How to manipulate bits and use bitwise operators
+* What is a dynamic library, how does it work, how to create one, and how to use it
+* What is the environment variable $LD_LIBRARY_PATH and how to use it
+* What are the differences between static and shared libraries
+* Basic usage nm, ldd, ldconfig
 
 ---
 
-### [0. 0](./0-binary_to_uint.c)
-* Write a function that converts a binary number to an unsigned int.
+### [0. A library is not a luxury but one of the necessities of life](./libholberton.so)
+* Create the dynamic library libholberton.so containing all the functions listed below:
 
 
-### [1. 1](./1-print_binary.c)
-* Write a function that prints the binary representation of a number.
-
-
-### [2. 10](./2-get_bit.c)
-* Write a function that returns the value of a bit at a given index.
-
-
-### [3. 11](./3-set_bit.c)
-* Write a function that sets the value of a bit to 1 at a given index.
-
-
-### [4. 100](./4-clear_bit.c)
-* Write a function that sets the value of a bit to 0 at a given index.
-
-
-### [5. 101](./5-flip_bits.c)
-* Write a function that returns the number of bits you would need to flip to get from one number to another.
-
-
-### [6. Endianness](./100-get_endianness.c)
-* Write a function that checks the endianness.
-
-
-### [7. Crackme3](./101-password)
-* Find the password for this program.
+### [1. Without libraries what have we? We have no past and no future](./1-create_dynamic_lib.sh)
+* Create a script that creates a dynamic library called liball.so from all the .c files that are in the current directory.
 
 
 ---
