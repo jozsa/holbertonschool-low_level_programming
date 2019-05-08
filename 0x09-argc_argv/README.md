@@ -28,10 +28,6 @@ What you should learn from this project:
 ### [4. To infinity and beyond](./4-add.c)
 * Write a program that adds positive numbers.
 
-
-### [5. Minimal Number of Coins for Change](./100-change.c)
-* Write a program that prints the minimum number of coins to make change for an amount of money.
-
 ---
 
 ## Author
