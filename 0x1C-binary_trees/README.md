@@ -99,85 +99,11 @@ What you should learn from this project:
 ### [21. Is complete](./102-binary_tree_is_complete.c)
 * Write a function that checks if a binary tree is complete
 
-
-### [22. Rotate left](./103-binary_tree_rotate_left.c)
-* Write a function that performs a left-rotation on a binary tree
-
-
-### [23. Rotate right](./104-binary_tree_rotate_right.c)
-* Write a function that performs a right-rotation on a binary tree
-
-
 ### [24. Is BST](./110-binary_tree_is_bst.c)
 * Write a function that checks if a binary tree is a valid Binary Search Tree
 
-
-### [25. BST - Insert](./111-bst_insert.c)
-* Write a function that inserts a value in a Binary Search Tree
-
-
-### [26. BST - Array to BST](./112-array_to_bst.c)
-* Write a function that builds a Binary Search Tree from an array
-
-
-### [27. BST - Search](./113-bst_search.c)
-* Write a function that searches for a value in a Binary Search Tree
-
-
-### [28. BST - Remove](./114-bst_remove.c)
-* Write a function that removes a node from a Binary Search Tree
-
-
 ### [29. Big O #BST](./115-O)
 * What are the average time complexities of those operations on a Binary Search Tree (one answer per line):
-
-
-### [30. Is AVL](./120-binary_tree_is_avl.c)
-* Write a function that checks if a binary tree is a valid AVL Tree
-
-
-### [31. AVL - Insert](./121-avl_insert.c)
-* Write a function that inserts a value in an AVL Tree
-
-
-### [32. AVL - Array to AVL](./122-array_to_avl.c)
-* Write a function that builds an AVL tree from an array
-
-
-### [33. AVL - Remove](./123-avl_remove.c)
-* Write a function that removes a node from an AVL tree
-
-
-### [34. AVL - From sorted array](./124-sorted_array_to_avl.c)
-* Write a function that builds an AVL tree from an array
-
-
-### [35. Big O #AVL Tree](./125-O)
-* What are the average time complexities of those operations on an AVL Tree (one answer per line):
-
-
-### [36. Is Binary heap](./130-binary_tree_is_heap.c)
-* Write a function that checks if a binary tree is a valid Max Binary Heap
-
-
-### [37. Heap - Insert](./131-heap_insert.c)
-* Write a function that inserts a value in Max Binary Heap
-
-
-### [38. Heap - Array to Binary Heap](./132-array_to_heap.c)
-* Write a function that builds a Max Binary Heap tree from an array
-
-
-### [39. Heap - Extract](./133-heap_extract.c)
-* Write a function that extracts the root node of a Max Binary Heap
-
-
-### [40. Heap - Sort](./134-heap_to_sorted_array.c)
-* Write a function that converts a Binary Max Heap to a sorted array of integers
-
-
-### [41. Big O #Binary Heap](./135-O)
-* What are the average time complexities of those operations on a Binary Heap (one answer per line):
 
 ---
 
